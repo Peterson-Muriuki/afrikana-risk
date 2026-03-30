@@ -17,7 +17,7 @@
 
 Built from real analytical work across African financial markets. Applicable to any bank, fintech, microfinance institution, telco, or subscription business that needs rigorous, regulatory-grade risk analytics.
 
-A sibling package to [`afrikana-analytics`](https://github.com/Peterson-Muriuki/afrikana-analytics) — which covers customer retention, LTV, demand forecasting, and infrastructure deployment.
+A sibling package to [`afrikana-analytics`](https://github.com/Peterson-Muriuki/afrikana-analytics) - which covers customer retention, LTV, demand forecasting, and infrastructure deployment.
 
 ---
 
