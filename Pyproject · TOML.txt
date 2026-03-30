@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "afrikana-risk"
+version = "1.0.0"
+description = "Production-ready quantitative risk toolkit — credit scoring, IFRS9 ECL, fraud detection, and model governance. Built in Africa, applicable anywhere."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Peterson Mutegi", email = "pitmuriuki@gmail.com" }]
+keywords = [
+    "credit-risk", "credit-scoring", "ifrs9", "basel", "ecl",
+    "fraud-detection", "model-governance", "scorecard", "pd-lgd-ead",
+    "stress-testing", "champion-challenger", "africa", "fintech", "banking",
+    "quantitative-finance", "machine-learning", "risk-analytics"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scikit-learn>=1.3",
+    "scipy>=1.11",
+    "lifelines>=0.27",
+    "statsmodels>=0.14",
+    "lightgbm>=4.0",
+    "optuna>=3.3",
+]
+
+[project.optional-dependencies]
+fraud = ["tensorflow>=2.13", "torch>=2.0"]
+ai    = ["mistralai>=0.4"]
+viz   = ["matplotlib>=3.7", "seaborn>=0.12", "plotly>=5.15"]
+dev   = [
+    "pytest>=7.4", "pytest-cov>=4.1",
+    "black>=23.0", "ruff>=0.1", "mypy>=1.5",
+    "pre-commit>=3.4",
+]
+all = ["afrikana-risk[fraud,ai,viz,dev]"]
+
+[project.urls]
+Homepage = "https://github.com/Peterson-Muriuki/afrikana-risk"
+Repository = "https://github.com/Peterson-Muriuki/afrikana-risk"
+Documentation = "https://github.com/Peterson-Muriuki/afrikana-risk#readme"
+"Bug Tracker" = "https://github.com/Peterson-Muriuki/afrikana-risk/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["afrikana_risk*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "UP"]

@@ -1,0 +1,98 @@
+Metadata-Version: 2.4
+Name: afrikana-risk
+Version: 1.0.0
+Summary: Production-ready quantitative risk toolkit — credit scoring, IFRS9 ECL, fraud detection, and model governance. Built in Africa, applicable anywhere.
+Author-email: Peterson Mutegi <pitmuriuki@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Peterson-Muriuki/afrikana-risk
+Project-URL: Repository, https://github.com/Peterson-Muriuki/afrikana-risk
+Project-URL: Documentation, https://github.com/Peterson-Muriuki/afrikana-risk#readme
+Project-URL: Bug Tracker, https://github.com/Peterson-Muriuki/afrikana-risk/issues
+Keywords: credit-risk,credit-scoring,ifrs9,basel,ecl,fraud-detection,model-governance,scorecard,pd-lgd-ead,stress-testing,champion-challenger,africa,fintech,banking,quantitative-finance,machine-learning,risk-analytics
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=2.0
+Requires-Dist: scikit-learn>=1.3
+Requires-Dist: scipy>=1.11
+Requires-Dist: lifelines>=0.27
+Requires-Dist: statsmodels>=0.14
+Requires-Dist: lightgbm>=4.0
+Requires-Dist: optuna>=3.3
+Provides-Extra: fraud
+Requires-Dist: tensorflow>=2.13; extra == "fraud"
+Requires-Dist: torch>=2.0; extra == "fraud"
+Provides-Extra: ai
+Requires-Dist: mistralai>=0.4; extra == "ai"
+Provides-Extra: viz
+Requires-Dist: matplotlib>=3.7; extra == "viz"
+Requires-Dist: seaborn>=0.12; extra == "viz"
+Requires-Dist: plotly>=5.15; extra == "viz"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
+Requires-Dist: pytest-cov>=4.1; extra == "dev"
+Requires-Dist: black>=23.0; extra == "dev"
+Requires-Dist: ruff>=0.1; extra == "dev"
+Requires-Dist: mypy>=1.5; extra == "dev"
+Requires-Dist: pre-commit>=3.4; extra == "dev"
+Provides-Extra: all
+Requires-Dist: afrikana-risk[ai,dev,fraud,viz]; extra == "all"
+
+# afrikana-risk
+
+Production-ready quantitative risk toolkit for credit scoring, IFRS9 ECL, fraud detection, and model governance.
+
+Built in Africa. Applicable anywhere.
+
+---
+
+## Features
+
+### Credit Risk
+- PD / LGD / EAD modeling
+- Scorecard building (WoE, IV)
+- Basel III capital estimation
+
+### IFRS 9
+- Stage 1 / 2 / 3 ECL
+- Macro-scenario overlays
+- Probability-weighted ECL
+
+### Stress Testing
+- Scenario analysis (base / adverse / severe)
+- Credit VaR (Monte Carlo, Vasicek)
+- NPL trajectory projection
+
+### Fraud Detection
+- Isolation Forest anomaly detection
+- Supervised fraud classification
+- Rule-based risk flags
+- Ensemble scoring
+
+### Model Monitoring
+- PSI (Population Stability Index)
+- Gini / KS tracking
+- Feature drift detection
+
+### Model Governance
+- Champion-Challenger framework
+- DeLong AUC significance testing
+- Audit trail for regulatory compliance
+
+---
+
+## Installation
+
+```bash
+pip install afrikana-risk
