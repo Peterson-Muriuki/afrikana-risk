@@ -4,7 +4,6 @@
 [![Python](https://img.shields.io/pypi/pyversions/afrikana-risk?color=green)](https://pypi.org/project/afrikana-risk/)
 [![License](https://img.shields.io/pypi/l/afrikana-risk?color=orange)](https://pypi.org/project/afrikana-risk/)
 [![](https://static.pepy.tech/badge/afrikana-risk)](https://pepy.tech/project/afrikana-risk)
-[![GitHub stars](https://img.shields.io/github/stars/Peterson-Muriuki/afrikana-risk?style=social)](https://github.com/Peterson-Muriuki/afrikana-risk)
 [![Repo](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/Peterson-Muriuki/afrikana-risk)
 ![Status](https://img.shields.io/badge/status-production--ready-brightgreen)
 
