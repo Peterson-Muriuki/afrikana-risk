@@ -7,6 +7,7 @@ afrikana_risk.egg-info/dependency_links.txt
 afrikana_risk.egg-info/requires.txt
 afrikana_risk.egg-info/top_level.txt
 afrikana_risk/ai/__init__.py
+afrikana_risk/ai/assistant.py
 afrikana_risk/credit/__init__.py
 afrikana_risk/credit/scorecard.py
 afrikana_risk/credit/scorer.py
