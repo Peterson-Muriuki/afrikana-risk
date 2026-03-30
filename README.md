@@ -8,6 +8,8 @@
 ![Status](https://img.shields.io/badge/status-production--ready-brightgreen)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
 ![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen)
+![Downloads](https://img.shields.io/pypi/dm/afrikana-risk)
+
 
 Production-ready quantitative risk toolkit for credit scoring, IFRS9 ECL, fraud detection, and model governance.
 
