@@ -6,6 +6,8 @@
 [![](https://static.pepy.tech/badge/afrikana-risk)](https://pepy.tech/project/afrikana-risk)
 [![Repo](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/Peterson-Muriuki/afrikana-risk)
 ![Status](https://img.shields.io/badge/status-production--ready-brightgreen)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
+![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen)
 
 Production-ready quantitative risk toolkit for credit scoring, IFRS9 ECL, fraud detection, and model governance.
 
