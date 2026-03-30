@@ -127,11 +127,11 @@ if cc.should_promote(result):
 
 Produces calibrated PD, LGD, and EAD estimates for Basel III and IFRS 9 reporting.
 
-- **PD model** — logistic regression on raw or WoE features, Platt-scaled for calibration. Optional LightGBM backend.
-- **LGD model** — beta regression (logit-transform + Ridge) on observed recovery data.
-- **EAD** — credit conversion factor (CCF) approach for undrawn lines; outstanding balance for drawn.
-- **Regulatory capital** — Vasicek ASRF formula: K = LGD × N(N⁻¹(PD)/√(1−R) + √(R/(1−R)) × N⁻¹(0.999)) − PD×LGD with maturity adjustment.
-- **TtC PD** — converts point-in-time PD to through-the-cycle PD for capital reporting.
+- **PD model** - logistic regression on raw or WoE features, Platt-scaled for calibration. Optional LightGBM backend.
+- **LGD model** - beta regression (logit-transform + Ridge) on observed recovery data.
+- **EAD** - credit conversion factor (CCF) approach for undrawn lines; outstanding balance for drawn.
+- **Regulatory capital** - Vasicek ASRF formula: K = LGD × N(N⁻¹(PD)/√(1−R) + √(R/(1−R)) × N⁻¹(0.999)) - PD×LGD with maturity adjustment.
+- **TtC PD** - converts point-in-time PD to through-the-cycle PD for capital reporting.
 
 ```
 Required columns: default (0/1), recovery_rate, outstanding, limit, drawn
@@ -142,14 +142,14 @@ Required columns: default (0/1), recovery_rate, outstanding, limit, drawn
 
 ### `ScorecardBuilder`
 
-Classic points-based credit scorecard — the industry standard for regulatory transparency.
+Classic points-based credit scorecard - the industry standard for regulatory transparency.
 
 - Equal-frequency WoE binning with small-bin merging
 - Information Value (IV) feature selection (auto-rejects IV < 0.02 and IV > 0.5)
 - Logistic regression on WoE-encoded features
 - Scorecard scaling: `score = offset + factor × ln(odds)`, PDO = 20
 
-**IV interpretation:** < 0.02 useless · 0.02–0.1 weak · 0.1–0.3 medium · 0.3–0.5 strong · > 0.5 suspicious
+**IV interpretation:** < 0.02 useless · 0.02–0.1 weak · 0.1-0.3 medium · 0.3-0.5 strong · > 0.5 suspicious
 
 ---
 
@@ -157,9 +157,9 @@ Classic points-based credit scorecard — the industry standard for regulatory t
 
 IFRS 9 Expected Credit Loss with full stage lifecycle.
 
-- **Stage 1** — performing: 12-month ECL
-- **Stage 2** — SICR (significant increase in credit risk): lifetime ECL
-- **Stage 3** — credit-impaired: lifetime ECL
+- **Stage 1** - performing: 12-month ECL
+- **Stage 2** - SICR (significant increase in credit risk): lifetime ECL
+- **Stage 3** - credit-impaired: lifetime ECL
 - Monthly discounting at effective interest rate (EIR)
 - Probability-weighted multi-scenario overlay (base / upside / adverse)
 - Stage migration matrix for period-over-period reporting
@@ -172,7 +172,7 @@ Macro scenario stress testing and portfolio VaR.
 
 - PD and LGD sensitivity to GDP, unemployment, interest rate, and FX shocks
 - Standard scenarios: base / adverse / severe (configurable)
-- **Credit VaR** — Gaussian copula Monte Carlo using Vasicek single-factor model; reports P10/P50/P90, VaR, Expected Shortfall, and economic capital
+- **Credit VaR** - Gaussian copula Monte Carlo using Vasicek single-factor model; reports P10/P50/P90, VaR, Expected Shortfall, and economic capital
 - NPL trajectory projection over multi-month horizon
 - Sensitivity sweep for regulatory ICAAP tables
 
@@ -197,7 +197,7 @@ Ensemble score = weighted combination. Output includes `anomaly_score`, `fraud_p
 
 Production model stability tracking.
 
-- **PSI** (Population Stability Index): < 0.10 stable · 0.10–0.25 warning · > 0.25 alert
+- **PSI** (Population Stability Index): < 0.10 stable · 0.10-0.25 warning · > 0.25 alert
 - Time-series of AUC, Gini, KS, Brier across monitoring periods
 - Decile table: score distribution and default rate by score decile
 - Feature-level PSI for input drift detection
@@ -269,7 +269,7 @@ Both packages share a common Mistral AI integration layer for natural language q
 
 ## Author
 
-**Peterson Mutegi** — Data Analyst · AI Engineer · Financial Engineer  
+**Peterson Mutegi** - Data Analyst · AI Engineer · Financial Engineer  
 Nairobi, Kenya · [pitmuriuki@gmail.com](mailto:pitmuriuki@gmail.com)  
 [GitHub](https://github.com/Peterson-Muriuki) · [LinkedIn](https://linkedin.com/in/peterson-mutegi)
 
