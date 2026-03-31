@@ -13,13 +13,11 @@ Implements:
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from typing import Callable
+from dataclasses import dataclass
 
 import numpy as np
 import pandas as pd
 from scipy.stats import norm
-
 
 # ---------------------------------------------------------------------------
 # Scenario definitions

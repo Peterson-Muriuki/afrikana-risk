@@ -307,8 +307,8 @@ class ChampionChallenger:
 
         v10_1, v01_1 = _v_stats(p1)
         v10_2, v01_2 = _v_stats(p2)
-        auc1 = v10_1.mean()
-        auc2 = v10_2.mean()
+        v10_1.mean()
+        v10_2.mean()
 
         s10 = np.cov(v10_1, v10_2)[0, 1] if n_pos > 1 else 0
         s01 = np.cov(v01_1, v01_2)[0, 1] if n_neg > 1 else 0

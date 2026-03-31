@@ -62,7 +62,7 @@ class FraudDetector:
         features = pd.concat([features, merchant_dummies], axis=1)
         return features
 
-    def fit(self, df: pd.DataFrame) -> "FraudDetector":
+    def fit(self, df: pd.DataFrame) -> FraudDetector:
         X = self._prepare_features(df)
         self.feature_cols = list(X.columns)
 

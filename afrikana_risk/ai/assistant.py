@@ -1,5 +1,6 @@
 import ollama
 
+
 class RiskAssistant:
     def __init__(self, model="mistral"):
         self.model = model

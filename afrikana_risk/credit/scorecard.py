@@ -22,16 +22,13 @@ References
 from __future__ import annotations
 
 import warnings
-from dataclasses import dataclass, field
-from typing import Literal
+from dataclasses import dataclass
 
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -169,7 +166,7 @@ class ScorecardBuilder:
     # ------------------------------------------------------------------
 
     def fit(self, df: pd.DataFrame, target: str = "default",
-            feature_cols: list[str] | None = None) -> "ScorecardBuilder":
+            feature_cols: list[str] | None = None) -> ScorecardBuilder:
         """
         Parameters
         ----------
@@ -361,7 +358,7 @@ class ScorecardBuilder:
     def _extract_bin_edges(woe_tbl: pd.DataFrame) -> np.ndarray | None:
         """Extract numeric bin edges from interval-labelled WoE table."""
         try:
-            intervals = pd.IntervalIndex(
+            pd.IntervalIndex(
                 [pd.Interval(b.left, b.right) for b in
                  pd.cut([], bins=1).cat.categories.__class__([]) ]
             )

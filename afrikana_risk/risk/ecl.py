@@ -26,6 +26,7 @@ probability weights and macro multipliers.
 from __future__ import annotations
 
 from dataclasses import dataclass
+
 import numpy as np
 import pandas as pd
 
@@ -186,11 +187,10 @@ class ECLEngine:
         current : ECL output from current period
         prior   : ECL output from prior period (must share index)
         """
-        cols = ["ifrs9_stage"]
         if "account_id" in current.columns:
-            key = "account_id"
+            pass
         else:
-            key = current.index
+            pass
 
         mig = pd.merge(
             prior[["ifrs9_stage"]].rename(columns={"ifrs9_stage": "prior_stage"}),

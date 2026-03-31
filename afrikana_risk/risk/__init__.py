@@ -1,5 +1,5 @@
 from .ecl import ECLEngine, MacroScenario, StageThresholds
-from .stress import StressTestor, STANDARD_SCENARIOS
+from .stress import STANDARD_SCENARIOS, StressTestor
 
 __all__ = [
     "ECLEngine",

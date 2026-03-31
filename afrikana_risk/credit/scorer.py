@@ -20,19 +20,19 @@ Design principles
 from __future__ import annotations
 
 import warnings
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Literal
 
 import numpy as np
 import pandas as pd
-from scipy.special import logit, expit
+from scipy.special import expit, logit
 from scipy.stats import ks_2samp
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
-    roc_auc_score,
     brier_score_loss,
     log_loss,
+    roc_auc_score,
 )
 from sklearn.model_selection import StratifiedKFold, train_test_split
 from sklearn.pipeline import Pipeline
@@ -138,7 +138,7 @@ class CreditScorer:
     # Public API
     # ------------------------------------------------------------------
 
-    def fit(self, df: pd.DataFrame, feature_cols: list[str] | None = None) -> "CreditScorer":
+    def fit(self, df: pd.DataFrame, feature_cols: list[str] | None = None) -> CreditScorer:
         """Train PD, LGD, and EAD sub-models.
 
         Parameters
