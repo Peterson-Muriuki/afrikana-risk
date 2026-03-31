@@ -8,7 +8,7 @@
 ![Status](https://img.shields.io/badge/status-production--ready-brightgreen)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
 ![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen)
-[![CI](https://img.shields.io/github/actions/workflow/status/Peterson-Muriuki/afrikana-risk/ci.yml?label=CI)](https://github.com/Peterson-Muriuki/afrikana-risk)
+[![CI](https://img.shields.io/github/actions/workflow/status/Peterson-Muriuki/afrikana-risk/ci.yml?branch=main&label=CI)](https://github.com/Peterson-Muriuki/afrikana-risk/actions)
 [![PyPI](https://img.shields.io/pypi/v/afrikana-risk)](https://pypi.org/project/afrikana-risk/)
 [![Python](https://img.shields.io/pypi/pyversions/afrikana-risk)](https://pypi.org/project/afrikana-risk/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
