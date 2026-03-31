@@ -27,8 +27,7 @@ jobs:
           pip install -e ".[dev]"
 
       - name: Lint with ruff
-        run: ruff check afrikana_risk/
-	continue-on-error: true
+        run: ruff check afrikana_risk/ --fix || true
 
       - name: Run tests
         run: pytest tests/ -v --cov=afrikana_risk --cov-report=xml
