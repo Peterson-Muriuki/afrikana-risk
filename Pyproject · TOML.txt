@@ -10,10 +10,23 @@ readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "Peterson Mutegi", email = "pitmuriuki@gmail.com" }]
 keywords = [
-    "credit-risk", "credit-scoring", "ifrs9", "basel", "ecl",
-    "fraud-detection", "model-governance", "scorecard", "pd-lgd-ead",
-    "stress-testing", "champion-challenger", "africa", "fintech", "banking",
-    "quantitative-finance", "machine-learning", "risk-analytics"
+    "credit-risk",
+    "credit-scoring",
+    "ifrs9",
+    "basel",
+    "ecl",
+    "fraud-detection",
+    "model-governance",
+    "scorecard",
+    "pd-lgd-ead",
+    "stress-testing",
+    "champion-challenger",
+    "africa",
+    "fintech",
+    "banking",
+    "quantitative-finance",
+    "machine-learning",
+    "risk-analytics"
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -42,11 +55,14 @@ dependencies = [
 
 [project.optional-dependencies]
 fraud = ["tensorflow>=2.13", "torch>=2.0"]
-ai    = ["mistralai>=0.4"]
-viz   = ["matplotlib>=3.7", "seaborn>=0.12", "plotly>=5.15"]
-dev   = [
-    "pytest>=7.4", "pytest-cov>=4.1",
-    "black>=23.0", "ruff>=0.1", "mypy>=1.5",
+ai = ["mistralai>=0.4"]
+viz = ["matplotlib>=3.7", "seaborn>=0.12", "plotly>=5.15"]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "black>=23.0",
+    "ruff>=0.1",
+    "mypy>=1.5",
     "pre-commit>=3.4",
 ]
 all = ["afrikana-risk[fraud,ai,viz,dev]"]
@@ -67,4 +83,6 @@ target-version = ["py310"]
 
 [tool.ruff]
 line-length = 100
+
+[tool.ruff.lint]
 select = ["E", "F", "I", "UP"]
